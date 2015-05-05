@@ -43,7 +43,8 @@
           axis: "y",
           reverse: false,
           trigger: "click",
-          speed: 500
+          speed: 500,
+          delay : 150
         }, options );
         
         // save reverse and axis css to DOM for performing flip
@@ -102,7 +103,7 @@
               if (!$dom.is(":hover")) {
                 unflip($dom);
               }
-            }, (settings.speed + 150));
+            }, (settings.speed + settings.delay));
           };
 
           var performUnflip = function() {
